@@ -1,0 +1,31 @@
+<div class="parent">
+    <div class="container login-container d-flex flex-md-row flex-column">
+        <!-- login image -->
+        <div class="col-md-6 d-none d-md-block">
+            <img src="images/login1.jpg" alt="Login Image" class="login-image">
+        </div>
+
+        <!-- login form -->
+        <div class="col-md-6 form-section">
+            <h3 class="text-center">Login</h3>
+            <form [formGroup]="loginForm">
+                <div class="mb-3">
+                    <label for="email" class="form-label"><i class="fas fa-envelope me-2"></i>Email address</label>
+                    <input type="email" formControlName="EmailId" class="form-control" id="email"
+                        placeholder="Enter email">
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label"><i class="fas fa-lock me-2"></i>Password</label>
+                    <input type="password" formControlName="Password" class="form-control" id="password"
+                        placeholder="Password">
+                </div>
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="remember">
+                    <label class="form-check-label" for="remember">Remember me</label>
+                </div>
+                <button type="button" (click)="onLogin()" class="btn btn-primary w-100">Login</button>
+                <p class="text-center mt-3">Don't have an account? <a href="#">Sign Up</a></p>
+            </form>
+        </div>
+    </div>
+</div>
